@@ -1,7 +1,7 @@
 class Word{
     private String name;
     private Word(String word){
-        this.name = word;
+        name = word;
     }
 
     public static Word getWord(String word){
@@ -10,8 +10,8 @@ class Word{
 
     public int countVowel(){
         int count = 0;
-        String wordInUpperCase = this.name.toUpperCase();
-        for(int counter = 0; counter<this.name.length(); counter++){
+        String wordInUpperCase = name.toUpperCase();
+        for(int counter = 0; counter<name.length(); counter++){
             char letter = wordInUpperCase.charAt(counter);
             if(letter =='A'||letter =='E'||letter =='I'||letter =='O'||letter =='U')
                 count++;
@@ -20,12 +20,12 @@ class Word{
     }
 
     public int countConsonents(){
-        return this.name.length() - countVowel();
+        return name.length() - countVowel();
     }
 
     public boolean isPalindrome(){
-        for(int counter = 0; counter<this.name.length()/2; counter++){
-            if(this.name.charAt(counter)!=this.name.charAt(this.name.length()-counter-1))
+        for(int counter = 0; counter<name.length()/2; counter++){
+            if(name.charAt(counter)!=name.charAt(name.length()-counter-1))
                 return false;
         }
         return true;
@@ -33,14 +33,14 @@ class Word{
 
     public String reverse(){
         String reversedString = "";
-        for(int counter = 0; counter<this.name.length(); counter++){
-            reversedString = this.name.charAt(counter)+reversedString;
+        for(int counter = 0; counter<name.length(); counter++){
+            reversedString = name.charAt(counter)+reversedString;
         }
         return reversedString;
     }
 
     private void printTheWord(){
-        System.out.println("The name is "+this.name);
+        System.out.println("The name is "+name);
     }
     public void print(){
         printTheWord();
