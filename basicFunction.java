@@ -1,22 +1,10 @@
-class Word{
-    private String name;
-    private Word(String word){
-        this.name = word;
-    }
-
-    public static Word getWord(String word){
-        return new Word(word);
-    }
-
-    public void printTheWord(){
-        System.out.println("The name is "+this.name);
-    }
-
-}
-
-class basicFunction{
+class BasicFunction{
     public static void main(String[] args) {
         Word w = Word.getWord("Brindaban");
-        w.printTheWord();
+        w.print();
+        int noOfVowels = w.countVowel();
+        System.out.println("In that word the total no vowel is "+noOfVowels);
+        int noOfConsonents = w.countConsonents();
+        System.out.println("In that word the total no consonents is "+noOfConsonents);
     }
 }
