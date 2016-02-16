@@ -23,6 +23,22 @@ class Word{
         return this.name.length() - countVowel();
     }
 
+    public boolean isPalindrome(){
+        for(int counter = 0; counter<this.name.length()/2; counter++){
+            if(this.name.charAt(counter)!=this.name.charAt(this.name.length()-counter-1))
+                return false;
+        }
+        return true;
+    }
+
+    public String reverse(){
+        String reversedString = "";
+        for(int counter = 0; counter<this.name.length(); counter++){
+            reversedString = this.name.charAt(counter)+reversedString;
+        }
+        return reversedString;
+    }
+
     private void printTheWord(){
         System.out.println("The name is "+this.name);
     }
