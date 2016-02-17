@@ -33,14 +33,16 @@ class Sentence{
         String newString = "";
         String stripString = strip();
         for(int counter = 0; counter<stripString.length(); counter++){
-            if(newString.indexOf(stripString.charAt(counter)))
+            if(newString.indexOf(stripString.charAt(counter))==-1);
                 newString += stripString.charAt(counter);
         }
         return newString;
     }
 
     public int countUniqueLetters(){
-        return uniqueLetters.length();
+        String newString = uniqueLetters();
+        // System.out.println(newString.length());
+        return newString.length();
     }
 
     private void printSentence(){
