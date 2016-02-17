@@ -29,6 +29,20 @@ class Sentence{
         return newString;
     }
 
+    public String uniqueLetters(){
+        String newString = "";
+        String stripString = strip();
+        for(int counter = 0; counter<stripString.length(); counter++){
+            if(newString.indexOf(stripString.charAt(counter)))
+                newString += stripString.charAt(counter);
+        }
+        return newString;
+    }
+
+    public int countUniqueLetters(){
+        return uniqueLetters.length();
+    }
+
     private void printSentence(){
         System.out.println("The sentence is -> "+mySentence);
     }
@@ -36,4 +50,5 @@ class Sentence{
     public void print(){
         printSentence();
     }
+
 }
