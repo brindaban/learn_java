@@ -6,6 +6,11 @@ class ArrayMain{
         myArrayWithUtil.reInitilize();
         myArrayWithUtil.addElement(1);
         myArrayWithUtil.addElement(2);
+        myArrayWithUtil.addElement(16);
+        myArrayWithUtil.addElement(26);
+        myArrayWithUtil.addElement(17);
+        myArrayWithUtil.addElement(106);
+
 
         int summationOfAllElements = myArrayWithUtil.sumAll();
         System.out.println("--------------------------------------------------------------------------------------");
